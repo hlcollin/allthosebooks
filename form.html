@@ -1,0 +1,231 @@
+<!DOCTYPE html>    
+<html lang="en">
+    <head>
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+        <style>
+            .container {
+                
+                height: auto;
+                display: flex;
+                
+                flex-wrap: wrap;
+                
+                padding: 10px 30px 30px 30px;
+            }
+            
+            form {
+                width: 530px;
+                background-color: lightgray;
+                margin-left: 300px;
+                margin-top: 10px;
+                padding-bottom: 40px;  
+            }
+            
+            #prompt {
+                width: 500px;
+                height: 40px;
+                background-color: white;
+                margin-top: 20px;
+                padding: 0px 0px 10px 10px;
+            }
+        
+            
+            .question {
+                width: 150px;
+                margin-top: 20px;
+                margin-right: 20px;
+            }
+            
+            #reset {
+                margin-left: 30px;
+                width: 100px;
+                font-size: 20px;
+                background-color: white;
+                color: black;
+            }
+            
+            #reset:hover {
+                cursor: pointer;
+                background-color: gray;
+                color: black;
+            }
+            
+            #submit {
+                margin-left: 30px;
+                width: 100px;
+                font-size: 20px;
+                background-color: white;
+                color: black;
+            }
+            
+            #submit:hover {
+                cursor: pointer;
+                background-color: gray;
+                color: black;
+            }
+            
+            .question_long {
+                width: 300px;
+                margin-top: 20px;
+                margin-right: 20px;
+            }
+            
+            
+            
+        </style>
+    </head>
+    
+    <body>
+        
+
+        <form id="mainForm" action="results.htm" method="get">
+            
+        <!-- action: formData.php or formTable.php or results.htm 
+        submit and reset buttons. -->
+        
+        <div class="container">
+            <div id="prompt"><h3>Please Fill Out Form</h3></div>
+            
+            <div class="question">
+                <label>Name of Book</label>
+                <input type="text" 
+                       length="50"
+                       placeholder="Penrose Annual, Vol. 40" 
+                       id="book" 
+                       name="book" 
+                       required="required"
+                       title="Enter one capital letter, then one or more lowercase letters">
+            </div>
+        
+            <div class="question">
+                <label>Year of Book</label>
+                <input type="text" 
+                       length="25" 
+                       pattern="[0-9]{5}"
+                       placeholder="Last Name" 
+                       id="lastName" 
+                       name="lastName" 
+                       required="required"
+                       title="Enter one capital letter, then one or more lowercase letters">
+            </div>
+            <div class="question">
+                <label>Email</label>
+                <input type="text"
+                       length="25" 
+                       pattern="\w+@[a-z]{1,63}\.[a-z]{2,4}"
+                       placeholder="Email" 
+                       id="email" 
+                       name="email" 
+                       required="required"
+                       title="Enter email address followed by @ and two word domain">
+            </div> 
+            
+            <div class="question">
+                <label>Confirm Email</label>
+                <input type="text" 
+                       pattern="\w+@[a-z]{1,63}\.[a-z]{2,4}"
+                       placeholder="Confirm Email" 
+                       id="email2" 
+                       name="email2" 
+                       required="required">
+            </div>    
+            <div class="question">
+                <label>Zip Code</label>
+                <input type="text" 
+                       pattern="[0-9]{5}"
+                       placeholder="Zip Code" 
+                       id="zip" name="zip" 
+                       required="required"
+                       title="Enter five-digit zip code">
+            </div>
+            
+            <div class="question">
+                <label>Age</label>
+                <input type="text"
+                       pattern="[1][0-4][0-9]|[1-9][2-9]"
+                       placeholder="Age" 
+                       id="age" name="age" 
+                       required="required"
+                       title="Must be between 12 and 149">
+            </div>
+            
+            <div class="question">
+                <label>Phone Number</label>
+                <input type="text"
+                       pattern="[0-9]{3}[ -]?[0-9]{3}[ -]?[0-9]{4}"
+                       placeholder="Phone Number" 
+                       id="phone" 
+                       name="phone" 
+                       required="required"
+                       title="Must be a 7 digit phone number">
+            </div>
+            
+            <div class="question"></div>
+            
+            <div class="question_long">
+                <label>Do you work full-time, part-time, or just focused on school?</label> <br>
+                <input type="radio" name="work" value="full-time" checked> Full-Time<br >
+                <input type="radio" name="work" value="part-time"> Part-Time<br >
+                <input type="radio" name="work" value="School"> School<br >
+            </div>
+            
+        </div>
+            
+        <input type="submit" id="submit" value="Submit">
+            
+        <input type="reset" id="reset" value="Reset">
+            
+            
+
+        
+        </form>
+        
+        <script type="text/javascript">
+                function checkMatch( ) {
+                //alert( "Hello" );
+                    console.log("in checkMatch")
+                    if( $("#email").val() != "" ||
+                        $("#email").val() === $("#email2").val() )
+                    return true;
+	
+                        var msg = "Email entered incorrectly: " + $("#email").val() + " is different from" + " " + $("#email2").val();
+                        console.log( msg );
+                        $("#prompt").text(  msg );
+                        $("#prompt").css( { "color":"red", "background-color":"black", } );
+                    return false;
+}
+            function sayHello( ) {
+                
+            }
+                $(document).ready( function() {
+                        $("#firstName").blur( function () {
+                        $("#prompt").text( "Hello " + $("#firstName").val() + ", please make sure you complete the whole form." )
+}); 
+                                             
+                        $("#email").focus( function() {
+                        $("#prompt").text( "Enter Email" );
+  });
+  
+                        $("#email").blur( function() {
+                        $("#prompt").text( "Emails must match");
+  });
+  
+  //note checkMatch() argument would call checkMatch
+                        $("#email2").blur( function() {
+	                       checkMatch();
+	                       return true; //continue with processing
+  });    
+  
+                        $("#mainForm").submit( checkMatch );   
+  
+});
+	
+	</script>
+
+        
+        
+        </body>
+    
+    </html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Those Books</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/agv0xaf.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="animate.css">
+</head>
+<body>
+    
+    <div id="video_container">
+        <video class="clearfix" width="1440" autoplay muted loop>
+                <source src="printing.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+
+    <header class="clearfix">
+        <h5>dear fellow grc student,</h5>
+        <h1>YOU KNOW ALL THOSE BOOKS IN THE RESOURCE ROOM<br >THAT NO ONE EVER LOOKS AT?</h1>
+    
+        <p id="large_text">I mean the really, really old ones. The ones where the binding is falling off and the endpaper probably smells like tobacco. Yeah, well those books actually have really, really, cool pictures inside. And I believe that your college experience will be significantly diminished if you do not look at them.</p>
+        <h1>BUT LET'S BE REAL</h1>
+        <p>no one in their right mind is ever going to actually get up, walk over, pick up, and open a book with their <span class="italic">hands.</span> So out of the goodness of my heart, I have done all the hard work for you. I chose <a id="header_book_link" href="#books">seven random old books,</a> found the <a id="header_pic_link" href="#pictures">best images</a> in each of them, and then put them all on this website for you to enjoy. No getting up required, all you have to do is...</p>
+        <h1><a id="click" href="#featured" >click.</a></h1>
+        <h6>yours truly,</h6>
+        <p><a href="about.html">heather collins</a></p>
+        <div class="citation">
+            <a href="https://archive.org/details/Printing1947#">Video:&ldquo;Printing&rdquo; by Holmes (Burton) Films, Inc. 1947.</a>
+        </div>
+    </header>
+    <!--appears when user scrolls down-->
+    <div id="subheader" class="subheader clearfix">
+        <a href="timeline.html">
+            <p style="margin-right:40px;">TIMELINE</p>
+        </a>
+       <a href="about.html">
+            <p>ABOUT</p>
+        </a>
+        <a href="upload.html">
+            <p>POST</p>
+        </a>
+        <a href="index.html">
+            <p>HOME</p>
+        </a>
+        <a href="index.html">
+            <h1>ALL THOSE BOOKS</h1>
+        </a>
+        
+    </div>
+
+    <div class="container">
+        <div id="ps">
+            <p><span class="bold">P.S.</span> If you decide to actually pull a book off the<br >shelf (like a weirdo) and you find something <br >interesting, you can post a photo of it</p>
+            <a href="upload.html"><h1>here.</h1></a>
+        </div>
+        <button id="books" class="accordion"><h1>BOOKS</h1></button>
+        <div id="books_panel" class="panel">
+            <div class="single_book_container">
+                <img  id="germanthirty" src="covers/germanthirty.png" class="single_book">
+                <div id="germanthirty_info" class="book_info">
+                    <h6>KLIMSCHS JAHRBUCH</h6>
+                   <table>
+                      <tr>
+                        <td><span class="display">year:</span></td>
+                        <td><span class="details">1936</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">volume:</span></td>
+                        <td><span class="details">29</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">region:</span></td>
+                        <td><span class="details">Germany</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">trivia:</span></td>
+                        <td><span class="details trivia">Produced during the same year Nazi Germany hosted the Olympics</span></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><span class="book_timeline_link"><a href='timeline.html?dt=1936'>see where it lands in history <i class="fa fa-chevron-right" aria-hidden="true"></i></a></span></td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="single_book_container">
+                <img id="penrosetwenty" src="covers/penrosetwenty.png" class="single_book">
+                <div id="penrosetwenty_info" class="book_info"><h6>PENROSE'S ANNUAL</h6>
+                    <table>
+                      <tr>
+                        <td><span class="display">year:</span></td>
+                        <td><span class="details">1920</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">volume:</span></td>
+                        <td><span class="details">22</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">region:</span></td>
+                        <td><span class="details">Great Britain</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">trivia:</span></td>
+                        <td><span class="details trivia">First Penrose produced after four year hiatus due to WWI</span></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><span class="book_timeline_link"><a href='timeline.html?dt=1920'>see where it lands in history <i class="fa fa-chevron-right" aria-hidden="true"></i></a></span></td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="single_book_container">
+                <img id="artsandcrafts" style="width:400px;" src="covers/artsandcrafts.png" class="single_book">
+                <div id="artsandcrafts_info" class="book_info" style="width:400px;margin-left:50px">
+                    <h6>THE GRAPHIC ARTS AND CRAFTS YEARBOOK</h6>
+                   <table>
+                      <tr>
+                        <td><span class="display">year:</span></td>
+                        <td><span class="details">1910</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">volume:</span></td>
+                        <td><span class="details">4</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">region:</span></td>
+                        <td><span class="details">United States</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">trivia:</span></td>
+                        <td><span class="details trivia">&#36;100 on eBay</span></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><span class="book_timeline_link"><a href='timeline.html?dt=1910'>see where it lands in history <i class="fa fa-chevron-right" aria-hidden="true"></i></a></span></td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="single_book_container">
+                <img id="penrosesixty" src="covers/penrosesixty.png" class="single_book">
+                <div id="penrosesixty_info" class="book_info"><h6>THE PENROSE ANNUAL</h6>
+                   <table>
+                      <tr>
+                        <td><span class="display">year:</span></td>
+                        <td><span class="details">1938</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">volume:</span></td>
+                        <td><span class="details">40</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">region:</span></td>
+                        <td><span class="details">Great Britain</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">trivia:</span></td>
+                        <td><span class="details trivia">Includes an article written by &ldquo;First Lady of Typography&rdquo; Beatrice Warde</span></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><span class="book_timeline_link"><a href='timeline.html?dt=1938'>see where it lands in history <i class="fa fa-chevron-right" aria-hidden="true"></i></a></span></td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="single_book_container">
+                <img id="penrosefifty" src="covers/penrosefifty.png" class="single_book">
+                <div id="penrosefifty_info" class="book_info"><h6>THE PENROSE ANNUAL</h6>
+                <table>
+                      <tr>
+                        <td><span class="display">year:</span></td>
+                        <td><span class="details">1950</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">volume:</span></td>
+                        <td><span class="details">44</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">region:</span></td>
+                        <td><span class="details">Great Britain</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">trivia:</span></td>
+                        <td><span class="details trivia">Produced during the peak of The Penrose Annual's popularity.</span></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><span class="book_timeline_link"><a href='timeline.html?dt=1950'>see where it lands in history <i class="fa fa-chevron-right" aria-hidden="true"></i></a></span></td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="single_book_container">
+                <img id="gajapan" src="covers/gajapan.png" class="single_book">
+                <div id="gajapan_info" class="book_info"><h6>GRAPHIC ARTS JAPAN</h6>
+                <table>
+                      <tr>
+                        <td><span class="display">year:</span></td>
+                        <td><span class="details">1961&ensp;1962</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">volume:</span></td>
+                        <td><span class="details">3</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">region:</span></td>
+                        <td><span class="details">Japan</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">trivia:</span></td>
+                        <td><span class="details trivia">Important in establishing foreign trade relations between printers in Japan and the rest of the world</span></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><span class="book_timeline_link"><a href='timeline.html?dt=1961'>see where it lands in history <i class="fa fa-chevron-right" aria-hidden="true"></i></a></span></td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="single_book_container">
+                <img id="polygraph" src="covers/polygraph.png" class="single_book">
+                <div id="polygraph_info" class="book_info"><h6>POLYGRAPH JARHBUCH</h6>
+                    <table>
+                      <tr>
+                        <td><span class="display">year:</span></td>
+                        <td><span class="details">1966</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">volume:</span></td>
+                        <td><span class="details">4</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">region:</span></td>
+                        <td><span class="details">Germany</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">trivia:</span></td>
+                        <td><span class="details trivia">Produced a year before the &ldquo;Summer of Love&rdquo;</span></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><span class="book_timeline_link"><a href='timeline.html?dt=1966'>see where it lands in history <i class="fa fa-chevron-right" aria-hidden="true"></i></a></span></td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <button id="pictures" class="accordion"><h1>PICTURES</h1></button>
+        <div id="pictures_panel" class="panel">
+            <!--Row 1--Images 1-4-->
+            <!--
+            <div class="single_image_container">
+                <img data-src="preview/bangs.jpg" alt="black and white photograph of woman" class="single_image" style="width:100% height:100%">
+                <div class="overlay">
+                    <div class="text">
+                        <p>
+                            <a class="single_image_text" onclick="openModal();currentSlide(1)" href="#"><i class="fas fa-ellipsis-h"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            -->
+            <button id="load-more-btn" type="button">load more</button>
+            
+            <!--lightbox-->
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <!--modal-content holds all 70 slides and the next/prev buttons-->
+                <div id="light-box" class="modal-content">
+                    <!--mySlides hold the photo and information for an individual image. -->
+                    <!--
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 70</div>
+                        <img src="cropped/bangs.jpg" >
+                        <div class="image_info">
+                            <table>
+                                <h1>&ldquo;UNKOWN&rdquo;</h1>
+                              <tr>
+                                <td><span class="display">year:</span></td>
+                                <td><span class="details">1966</span></td>
+                              </tr>
+                              <tr>
+                                <td><span class="display">book:</span></td>
+                                <td><span class="details"><a href="#books">Polygraph Jahrbuch, Vol. 4</a></span></td>
+                              </tr>
+                              <tr>
+                                <td><span class="display">page:</span></td>
+                                <td><span class="details">UNKNOWN</span></td>
+                              </tr>
+                              <tr>
+                                <td><span class="display">region:</span></td>
+                                <td><span class="details">Germany</span></td>
+                              </tr>
+                              <tr>
+                                <td><span class="display">topic:</span></td>
+                                <td><span class="details">&ldquo;UNKNOWN&rdquo;</span></td>
+                              </tr>
+                              <tr>
+                                <td><span class="display">type:</span></td>
+                                <td><span class="details">UNKNOWN</span></td>
+                              </tr>
+                              <tr>
+                                <td><span class="display">notes:</span></td>
+                                <td><div class="details notes">&ldquo;The British printer has too often been told that he could not produce work equal to that produced in Germany, but we are glad to note that a big spurt has recently been made by some printers—almost as big a spurt as that made by the Government in the production of munitions. We are bound to recognize the splendid effort in this direction made by Messrs. Harrison, Townsend & Co., Ltd., of Leeds, who have produced the inset immediately opposite. This firm are producing color-work of the finest quality on all kinds of fabrics—satin, silk, canvas, velveteen and other textiles—which will bear comparison with the best work produced on paper. What is more, the work is produced at prices which at once make it commercially practical. They have already executed large orders for prints similar to the one before us. They are also producing fine color-work on paper ; [sic] in fact they have undertaken successfully many orders for goods previously obtained from Germany. The Editor has had an opportunity of looking over a good range of the specialties produced by this firm, and is quite satisfied that they are capable of holding their own with the best Continental or American printers. We are pleased to find at least one firm of British printers really awake, and hope they will meet with the support which their efforts merit.&rdquo;</div></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td><span class="timeline_link"><a href="#timeline" target="_blank">see where it lands in history <i class="fa fa-chevron-right" aria-hidden="true"></i></a></span></td>
+                              </tr>
+                            </table>
+                        </div>
+                    </div>
+                    end of mySlides #1 --> 
+                    
+                <a class="prev cursor" onclick="plusSlides(-1)"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                <a class="next cursor" onclick="plusSlides(1)"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
+                <!--end of modal content-->
+            </div>
+        </div>
+        <button id="timeline" class="accordion"><h1>TIMELINE</h1></button>
+        <div id="timeline_panel" class="panel">
+            <a id="timeline_preview" href="timeline.html"><img src="timeline.png"></a>
+            <a id="timeline_preview_button" href="timeline.html">view timeline <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+        <button id="featured" class="accordion"><h1>FEATURED</h1></button>
+        <div id="featured_panel" class="panel">
+                <img style="width:819px;height:609px;margin-top:27px;margin-bottom:27px;" alt="sailboats on Lake Kasumigaura"src="cropped/sails.jpg" >
+                <div class="image_info">
+                    <table>
+                        <h1>&ldquo;SAILBOATS&rdquo;</h1>
+                      <tr>
+                        <td><span class="display">year:</span></td>
+                        <td><span class="details">1961-1962</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">book:</span></td>
+                        <td><span class="details"><a href="#books">Graphic Arts Japan, Vol. 3</a></span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">page:</span></td>
+                        <td><span class="details">127</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">region:</span></td>
+                        <td><span class="details">Japan</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">topic:</span></td>
+                        <td><span class="details">Advertisement</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">type:</span></td>
+                        <td><span class="details">Deep-Etch Plate 6-Color Offset</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="display">notes:</span></td>
+                        <td><div class="details notes">&ldquo;The sailboats catching pond-smelt, on the Kasumigaura Lake, Ibaragi Prefecture. These boats are not equipped with motors, but drift around at the mercy of the wind on the lake, towing each a small net in the water. This primitive method of fishing is used even in these days.&rdquo;</div></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><span class="timeline_link"><a href='timeline.html?dt=1961'>see where it lands in history <i class="fa fa-chevron-right" aria-hidden="true"></i></a></span></td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+         <footer>
+            <p>&copy;2018 Heather Collins</p>
+             <p>This site is part of a senior project assignment at Cal Poly, San Luis Obispo</p>
+             <p>Contact: <a href="mailto:heathermarilyncollins@gmail.com">heathermarilyncollins&#64;gmail.com</a></p>
+        </footer>
+    </div>
+    <div class="side_nav" id="side_nav">
+        <a href="#" id="side_books"><h5>BOOKS</h5></a>
+        <a href="#" id="side_pictures"><h5>PICTURES</h5></a>
+        <a href="#" id="side_timeline"><h5>TIMELINE</h5></a>
+        <a href="#" id="side_featured"><h5>FEATURED</h5></a>
+    </div>
+   
+    <script src="calpoly.js"></script>
+</body>
+    
+</html>

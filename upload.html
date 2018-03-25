@@ -1,0 +1,219 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>All Those Books</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<script defer
+	src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+	type="text/javascript"></script>
+<link rel="stylesheet" href="https://use.typekit.net/agv0xaf.css">
+<link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+	<div class="subheader clearfix">
+        <a class="mobile_hidden" href="timeline.html">
+            <p style="margin-right:40px;">TIMELINE</p>
+        </a>
+       <a class="mobile_hidden" href="about.html">
+            <p>ABOUT</p>
+        </a>
+        <a class="mobile_hidden" href="upload.html">
+            <p>POST</p>
+        </a>
+        <a class="mobile_hidden" href="index.html">
+            <p>HOME</p>
+        </a>
+        <a class="mobile_hidden" href="index.html">
+            <h1>ALL THOSE BOOKS</h1>
+        </a>
+        <a class="mobile" href="#mobile_about">
+            <h1>ALL THOSE BOOKS</h1>
+        </a>
+        
+    </div>
+
+	<div class="form_container">
+		<h3 class="upload_header">POST A PICTURE</h3>
+
+		<div class="form_items">
+			<h5>FIND SOMETHING INTERESTING?</h5>
+			<p>upload a photo of an interesting page from a book in our
+				resource room!</p>
+			<span class="form_details">&#42; required fields</span>
+			<form id="upload-form" action="api/file/upload" method="post" enctype="multipart/form-data">
+				<label><p>image:&#42;</p></label><input type="file" name="file" id="file" size="45"> 
+				<label><p>preview:&#42;<span class="form_details">&#40;upload square thumbnail version of image, or upload copy of original&#41;</span></p></label>
+                <input type="file" name="file_preview" id="file_preview" size="45"> 
+				<input type="hidden" id="image" name="image" >
+                
+                <label for="title">title:
+					<br>
+				<span class="form_details">&#40;image title listed in book,
+						or one of your own invention&#41;</span>
+				</label> <input type="text" id="title" name="title" length="25"
+					placeholder="My Title..."> <label for="book">book:&#42;</label>
+				<input type="text" id="book" name="book" length="50" class="required"
+					placeholder="Penrose Annual Vol. 40..."> <label for="year">year:&#42;</label>
+				<input type="text" id="year" name="year" length="50" class="required" 
+					placeholder="1938"> <label for="page">page:</label> <input
+					type="text" id="page" name="page" length="5" placeholder="146">
+
+				<label for="region">region:&#42;</label> <select id="region"
+					name="region" class="required" >
+					<option value="Australia">Australia</option>
+					<option value="Germany">Germany</option>
+                    <option value="Great Britain">Great Britain</option>
+					<option value="Japan">Japan</option>
+					<option value="USA">USA</option>
+					<option value="Other">Other</option>
+				</select> <label for="topic">topic:&#42; <br>
+				<span class="form_details">&#40;name of chapter or section in
+						which the image is featured&#41;</span></label> <input type="text" id="topic"
+					name="topic" class="required" placeholder="Offset Lithography Practices...">
+
+				<label for="type">type: <br>
+				<span class="form_details">&#40;printing process used to
+						create image&#41;</span></label> <input type="text" id="type" name="type"
+					placeholder="Four-Color Offset Lithography..."> <label
+					for="notes">notes:<br> <span class="form_details">&#40;additional
+						information about image&#41;</span></label>
+
+				<textarea id="notes" name="notes"
+					placeholder="Reproduced by permission of the American Overseas Airlines..."></textarea>
+
+				<input id="submit" type="submit" value="POST">
+
+			</form>
+			<div class="past_posts">
+				<h5>past posts</h5>
+				<div class="single_image_container">
+					<img alt="past post" src="preview/prev_post1.jpg"
+						class="single_image"  style="width: 100% height:100%">
+					<div class="overlay">
+						<div class="text">
+							<p class="post_p">
+								<a id="past_post1" class="single_image_text" href="#">&ldquo;The
+									Jogger&rdquo;</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="single_image_container">
+					<img alt="past post" src="preview/prev_post2.jpg"
+						class="single_image" style="width: 100% height:100%">
+					<div class="overlay">
+						<div class="text">
+							<p class="post_p">
+								<a id="past_post2" class="single_image_text" href="#">&ldquo;Impression&rdquo;</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="single_image_container">
+					<img alt="past post" src="preview/prev_post3.jpg"
+						class="single_image" style="width: 100% height:100%">
+					<div class="overlay">
+						<div class="text">
+							<p class="post_p">
+								<a id="past_post3" class="single_image_text" href="#">&ldquo;Old
+									School GrC Banquet&rdquo;</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="single_image_container">
+					<img alt="past post" src="preview/prev_post4.jpg"
+						class="single_image" style="width: 100% height:100%">
+					<div class="overlay">
+						<div class="text">
+							<p class="post_p">
+								<a id="past_post4" class="single_image_text" href="#">&ldquo;1950's
+									Pressroom&rdquo;</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div> 
+		</div>
+	</div>
+	
+    <div class="mobile_pictures">
+        <a class="upload_mobile_link" href="upload_mobile.html">Post your own  <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        <a class="upload_mobile_link" href="upload.html#image_target">Browse images <i class="fa fa-chevron-down" aria-hidden="true"></i> </a>
+        <img id="image_target" src="preview/bangs.jpg" alt="black and white photograph of woman" class="single_image" style="width:100% height:100%">
+        <p>Polygraph Jahrbuch Vol. 4, 1966</p>
+        <img src="preview/paintface.jpg" alt="abstract painting of a man's face" class="single_image" style="width:100% height:100%">
+        <p>Polygraph Jahrbuch Vol. 4,1966</p>
+        <img src="preview/parrot.jpg" alt="detailed painting of a parrot" class="single_image" style="width:100% height:100%">
+        <p>Polygraph Jahrbuch Vol. 4, 1966</p>
+        <img src="preview/bathrobe.jpg" alt="paintng of woman in blue bathrobe" class="single_image" style="width:100% height:100%">
+        <p>Klimsch Jahrbuch Vol. 29, 1936</p>
+        <img src="preview/patagonia.jpg" alt="german map of patagonia" class="single_image" style="width:100% height:100%">
+        <p>Klimsch Jahrbuch Vol. 29, 1936</p>
+        <img src="preview/pipe.jpg" alt="painting of man smiling and holding tabacco pipe" class="single_image" style="width:100% height:100%">
+        <p>Penrose's Annual Vol. 22, 1920</p>
+        <img src="preview/poster.jpg" alt="art nouveau style poster" class="single_image" style="width:100% height:100%">
+        <p>Penrose's Annual Vol. 22, 1920</p>
+        <img src="preview/prepress.jpg" alt="two men preparing analog film" class="single_image" style="width:100% height:100%">
+        <p>Polygraph Jahrbuch Vol. 4, 1966</p>
+        <img src="preview/butterflies.jpg" alt="butterfly classification image" class="single_image" style="width:100% height:100%">
+        <p >Graphic Arts Japan Vol. 3, 1961-1962</p>
+        <img src="preview/golfer.jpg" alt="golfer enjoying a drink" class="single_image" style="width:100% height:100%">
+        <p>Graphic Arts Japan Vol. 3, 1961-1962</p>
+        <img src="preview/cigars.jpg" alt="cigar label from 1800s" class="single_image" style="width:100% height:100%">
+        <p>The Graphic Arts and Crafts Yearbook Vol. 4, 1910</p>
+        <img src="preview/cmky.jpg" alt="beginnings of four color printing" class="single_image" style="width:100% height:100%">
+        <p>The Graphic Arts and Crafts Yearbook Vol. 4, 1910</p>
+        <img src="preview/coloring.jpg" alt="child-like drawing of a steamer" class="single_image" style="width:100% height:100%">
+        <p>Polygraph Jahrbuch Vol. 4, 1966</p>
+        <img src="preview/ballet.jpg" alt="male ballet dancer" class="single_image" style="width:100% height:100%">
+        <p>The Penrose Annual Vol. 40, 1938</p>
+        <img src="preview/degas.jpg" alt="degas etching" class="single_image" style="width:100% height:100%">
+        <p>Graphic Arts Japan Vol. 3, 1961-1962</p>
+        <img src="preview/embossing.jpg" alt="advertisement demonstration of paper embossing" class="single_image" style="width:100% height:100%">
+        <p>The Graphic Arts and Crafts Yearbook Vol. 4, 1910</p>
+        <img src="preview/film.jpg" alt="halftone image from movie still" class="single_image" style="width:100% height:100%">
+        <p>The Penrose Annual Vol. 40, 1938</p>
+        <img src="preview/flexo.jpg" alt="flexo printed clear label" class="single_image" style="width:100% height:100%">
+        <p>Klimsch Jahrbuch Vol. 29, 1936</p>
+        <img src="preview/flowers.jpg" alt="painted wild flowers" class="single_image" style="width:100% height:100%">
+        <p>The Penrose Annual Vol. 44, 1950</p>
+        <img src="preview/flowergirls.jpg" alt="young girls dressed up for event" class="single_image" style="width:100% height:100%">
+        <p>Polygraph Jahrbuch Vol. 4, 1966</p>
+        <img src="preview/germanfood.jpg" alt="german food advertisement" class="single_image" style="width:100% height:100%">
+        <p>Polygraph Jahrbuch Vol. 4, 1966</p>
+        <img src="preview/keys.jpg" alt="cover advertisement" class="single_image" style="width:100% height:100%">
+        <p>The Penrose Annual Vol. 40, 1938</p>
+        <img src="preview/lemonade.jpg" alt="woman enjoying a drink" class="single_image" style="width:100% height:100%">
+        <p>Klimsch Jahrbuch Vol. 29, 1936</p>
+        <img src="preview/lilies.jpg" alt="painting of two women gathering flowers" class="single_image" style="width:100% height:100%">
+        <p>Penrose's Annual Vol. 22, 1920</p>
+        <img src="preview/magcover.jpg" alt="magazine cover from 1930s" class="single_image" style="width:100% height:100%">
+        <p>The Penrose Annual Vol. 40, 1938</p>
+        <img src="preview/mensclothes.jpg" alt="painting of men's fashion items" class="single_image" style="width:100% height:100%">
+        <p>The Penrose Annual Vol. 40, 1938</p>
+        <img src="preview/middleages.jpg" alt="middle-ages illumination style painting" class="single_image" style="width:100% height:100%">
+        <p>Klimsch Jahrbuch Vol. 29, 1936</p>
+        <img src="preview/montage.jpg" alt="images of printing technology" class="single_image" style="width:100% height:100%">
+        <p>Graphic Arts Japan Vol. 3, 1961-1962</p>
+        <img src="preview/blueeyeliner.jpg" alt="lady with 1960s makeup" class="single_image" style="width:100% height:100%">
+        <p>Graphic Arts Japan Vol. 3, 1961-1962</p>
+        <img src="preview/boat.jpg" alt="image of someone standing on a boat" class="single_image" style="width:100% height:100%">
+        <p>Graphic Arts Japan Vol. 3, 1961-1962</p>
+        <h1 id="mobile_about">WHAT IS THIS?</h1>
+    <h2>WHO MADE IT?</h2>  
+    <p>Heather Collins, a fourth year Graphic Communication major at Cal Poly, San Luis Obispo, was sitting in the <a href=“http://www.grc.calpoly.edu/special-collections/rjpgac”>RJPGAC Resource Room</a> killing time before her Printed Electronics lab. She noticed all the books on the shelves and realized that she had no idea what was inside them. Breaking millennial protocol, she closed her laptop and grabbed a Penrose Annual from the shelf. The contents were astoundingly beautiful. Newly enlightened with this experience, she decided to center her senior project around exploring and sharing the contents of &ldquo;all those books&rdquo; in the Resource Room. </p>
+    <p>This site was developed to celebrate the rich and interesting history of graphic communication by gathering together images found inside forgotten graphic art yearbooks from the twentieth century. It is a reminder that as part of the graphic communication industry, we are forever connected with typefounders, photographers, and bookbinders of old, and share with them the legacy of graphic communication and its expansion from letterpress to a web page like this one.</p>
+    </div>
+    <p style="margin-left:30px;margin-top:-10px;margin-bottom:30px;">Contact: <a href="mailto:heathermarilyncollins@gmail.com" style="color: black;">heathermarilyncollins&#64;gmail.com</a></p>
+    <a  class="upload_mobile_link" id="last_paragraph" href="#top">Back to top</a>
+    <div class="mobile_footer"></div>
+    
+    <script src="upload.js"></script>
+</body>
+</html>
